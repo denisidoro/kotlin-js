@@ -5,5 +5,11 @@ import kotlin.browser.document
 
 fun main() {
     val div = document.getElementById("app") as HTMLDivElement
-    div.innerHTML = "hello"
+    val names = arrayOf("hello", "kotlin", "js")
+
+    names.forEach {
+        val paragraph = document.createElement("p")
+        paragraph.innerHTML = it
+        div.appendChild(paragraph)
+    }
 }
